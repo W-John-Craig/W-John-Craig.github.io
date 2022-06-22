@@ -12,12 +12,6 @@
 <head>
   <title>Whereby Embedded Room</title>
   <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-  <script type="text/javascript">
-    var link = window.prompt("Enter whereby link");
-    if (link != null) {
-      document.getElementById("wherebyframe").src = link;
-    }
-  </script>
 </head>
 <body>
   <table border="0">
@@ -25,8 +19,14 @@
       <td>Whereby Room</td>
     </tr>
     <tr>
-      <iframe id="wherebyframe" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
+      <iframe height="720" width="1280" id="wherebyframe" src="" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
     </tr>
   </table>
+  <script type="text/javascript">
+    let t_link = window.prompt("Enter whereby link");
+    if (link != null) {
+      document.getElementById("wherebyframe").setAttribute("src", t_link);
+    }
+  </script>
 </body>
 </html>
