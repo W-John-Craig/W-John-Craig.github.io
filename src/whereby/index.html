@@ -19,13 +19,21 @@
       <td>Whereby Room</td>
     </tr>
     <tr>
-      <iframe height="720" width="1280" id="wherebyframe" src="" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
+      <td>
+        <input type="text", id="url_input", name="url_input", size="32", value="">
+        <input type="button" value="submit", id="submit_button">
+      </td>
+    </tr>
+    <tr>
+      <iframe height="480" width="360" id="wherebyframe" src="" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
     </tr>
   </table>
   <script type="text/javascript">
-    let t_link = window.prompt("Enter whereby link");
-    if (link != null) {
-      document.getElementById("wherebyframe").setAttribute("src", t_link);
+    let t_button = document.getElementById("submit_button");
+    t_button.addEventListener("click", set_url);
+
+    function set_url() {
+      document.getElementById("wherebyframe").setAttribute("src", document.getElementById("url_input").value);
     }
   </script>
 </body>
