@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2014 The WebRTC project authors. All Rights Reserved.
+
+  Use of this source code is governed by a BSD-style license
+  that can be found in the LICENSE file in the root of the source
+  tree. An additional intellectual property rights grant can be found
+  in the file PATENTS.  All contributing project authors may
+  be found in the AUTHORS file in the root of the source tree.
+-->
+<html>
+<head>
+  <title>Whereby Embedded Room</title>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+</head>
+<body>
+  <table border="0">
+    <tr>
+      <td>WebView Crash</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text", id="text_0", name="text_0", size="32", value="">
+      </td>
+      <td>
+        <input type="text", id="text_1", name="text_1", size="32", value="">
+      </td>
+    </tr>
+  </table>
+  <script type="text/javascript">
+    let t_text_0 = document.getElementById("text_0");
+    let t_text_1 = document.getElementById("text_1");
+
+    t_text_0.addEventListener('change', (event) => {
+      liveCode.myJSHandler();
+    });
+
+    t_text_1.addEventListener('change', (event) => {
+      liveCode.myJSHandler();
+    });
+  </script>
+</body>
+</html>
